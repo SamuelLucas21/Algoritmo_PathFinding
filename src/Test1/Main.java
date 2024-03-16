@@ -1,20 +1,16 @@
 package Test1;
 
-public class Main {
+import javafx.application.Application;
+import javafx.stage.Stage;
+
+public class Main extends Application {
 		public static void main(String args[])throws Exception{
-		 Lista list = new Lista();
-			list.add("Bugarest", 0);
-			list.add("São Paulo", 0);
-			list.add("Cruzeiro", 0);
-			list.add("Taubaté", 0);
-			list.add("Lorena", 0);
-			
-			list.addRandom("Guará");
+		 	launch(args);
+		}
 
-			list.showProximos();
-
-
-
-			
+		@Override
+		public void start(Stage arg0) throws Exception {
+			TelaMain screenMain = new TelaMain("First_Window");
+			screenMain.Display(true);
 		}
 }
