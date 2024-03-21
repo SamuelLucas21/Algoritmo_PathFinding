@@ -3,24 +3,21 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DialogPane?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="Tela_Screen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="Tela_Screen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="585.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="76.0" layoutY="129.0">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="76.0" layoutY="223.0" text="Destino:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <TextField fx:id="textfield1" layoutX="76.0" layoutY="162.0" />
       <DialogPane layoutX="-211.0" layoutY="-249.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="119.0" prefWidth="422.0">
           <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
@@ -29,12 +26,45 @@
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
           </expandableContent>
       </DialogPane>
-      <Label layoutX="76.0" layoutY="113.0" text="Origem:">
+      <Button fx:id="button1" layoutX="76.0" layoutY="195.0" mnemonicParsing="false" onAction="#onClickedPressed" text="Enter" />
+      <TextArea fx:id="textArea1" editable="false" layoutX="185.0" layoutY="306.0" prefHeight="200.0" prefWidth="239.0" />
+      <RadioButton fx:id="Amplitude" layoutX="33.0" layoutY="33.0" mnemonicParsing="false" onAction="#FucAmplitude" text="Amplitude" />
+      <RadioButton fx:id="Profundidade" layoutX="33.0" layoutY="64.0" mnemonicParsing="false" onAction="#FuncProfundidade" text="Profundidade" />
+      <RadioButton fx:id="Profundidade_Limitada" layoutX="33.0" layoutY="98.0" mnemonicParsing="false" onAction="#FucProfundidade_Limit" text="Profundidade Limitada" />
+      <RadioButton fx:id="Aprofundamento_Iterativo" layoutX="33.0" layoutY="131.0" mnemonicParsing="false" onAction="#FunAprofundamento_Ite" text="Aprofundamento Iterativo" />
+      <RadioButton fx:id="Busca_Bidirecional" layoutX="33.0" layoutY="162.0" mnemonicParsing="false" onAction="#FuncBusca_Bidirecional" text="Busca Bidirecional" />
+      <Label layoutX="239.0" layoutY="270.0" text="Caminho:">
          <font>
-            <Font size="20.0" />
+            <Font size="25.0" />
          </font>
       </Label>
-      <TextField fx:id="textField2" layoutX="76.0" layoutY="258.0" />
-      <Button fx:id="button1" layoutX="126.0" layoutY="308.0" mnemonicParsing="false" onAction="#onClickedPressed" text="Enter" />
+      <Label layoutX="312.0" layoutY="35.0" text="Nos:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldNos" editable="false" layoutX="394.0" layoutY="38.0" />
+      <Label layoutX="300.0" layoutY="116.0" text="Custo:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelCustos" layoutX="394.0" layoutY="117.0" prefHeight="30.0" prefWidth="73.0" text="0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="301.0" layoutY="192.0" text="Niveis:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFiledNiveis" editable="false" layoutX="394.0" layoutY="195.0" />
+      <Label fx:id="LimitedLabel" layoutX="33.0" layoutY="245.0" prefHeight="16.0" prefWidth="53.0" text="Limite:" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="SpinLimit" editable="true" layoutX="91.0" layoutY="243.0" onDragDetected="#AuxLimit" prefHeight="24.0" prefWidth="91.0" visible="false" />
    </children>
 </Pane>
