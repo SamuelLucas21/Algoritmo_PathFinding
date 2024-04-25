@@ -1,5 +1,4 @@
 package Test1;
-
 public class Elemento {
     private String cidade;    
     private Elemento prox, anteiro,pai,filho;
