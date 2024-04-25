@@ -222,7 +222,7 @@ public class Lista {
         }
             if (parada) {
             break;
-        }
+        }   
     }
         if (parada) {
         String noAtual = fim;
@@ -236,6 +236,7 @@ public class Lista {
         this.setCaminho.clear();
         this.setCaminho.addAll(caminho);
         this.peso=(caminho.size()-1);
+        this.setNiveis.addAll(niveis);
     } else {
         System.out.println("Caminho não encontrado.");
     }
@@ -340,6 +341,8 @@ public class Lista {
             this.setCaminho.clear();
             this.setCaminho.addAll(caminho);
             this.peso=(caminho.size()-1);
+            this.setNiveis.addAll(niveis);
+
             
         } else {
             System.out.println("Caminho não encontrado.");
@@ -464,6 +467,8 @@ public class Lista {
                         System.out.println(caminho);
                         this.setCaminho.addAll(caminho);
                         this.peso+=(caminho.size()-1);
+                        this.setNiveis.addAll(niveis);
+
                     }
                 }
             }
@@ -622,6 +627,9 @@ void BuscaProfundidadeLimitada(String inicio, String fim, String[] nos, List<Str
 	            System.out.println("Caminho encontrado: " + caminho);
                 this.setCaminho.clear();
                 this.setCaminho.addAll(caminho);
+                this.setNiveis.addAll(niveis);
+                this.peso=(caminho.size()-1);
+
 	            break; // Interrompe o loop externo, pois o caminho foi encontrado
 	        } else {
 	            System.out.println("Caminho não encontrado para o nível: " + l);

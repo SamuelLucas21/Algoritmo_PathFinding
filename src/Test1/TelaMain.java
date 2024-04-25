@@ -3,6 +3,7 @@ package Test1;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 public class TelaMain {
@@ -25,6 +26,8 @@ public class TelaMain {
         if(visual == true) stage.show();
         else stage.close();
     }
+	public void addConponet(Circle newCircle, int locateX, int locateY){
 
+	}
     
 }
